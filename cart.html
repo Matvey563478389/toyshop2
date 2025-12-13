@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Мир детских игрушек</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🎨 Мир Детских Игрушек</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="benefits.html">Польза и развитие</a></li>
+                    <li id="user-menu">
+                        <span id="user-greeting"></span>
+                        <div class="user-dropdown">
+                            <a href="profile.html" id="profile-link">Личный кабинет</a>
+                            <a href="cart.html">Корзина (<span id="cart-counter">0</span>)</a>
+                            <a href="#" id="logout-link">Выйти</a>
+                        </div>
+                    </li>
+                    <li id="guest-menu">
+                        <a href="login.html" class="btn-login">Войти</a>
+                        <a href="register.html" class="btn-register">Регистрация</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="cart-page">
+                <h1>Корзина покупок</h1>
+                
+                <div class="cart-container">
+                    <div class="cart-items">
+                        <div id="empty-cart" class="empty-cart">
+                            <div class="empty-icon">🛒</div>
+                            <h3>Ваша корзина пуста</h3>
+                            <p>Добавьте товары из каталога</p>
+                            <a href="catalog.html" class="btn btn-primary">Перейти в каталог</a>
+                        </div>
+                        
+                        <div id="cart-content" class="cart-content">
+                            <!-- Динамически заполняется через JS -->
+                        </div>
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <div class="summary-card">
+                            <h3>Ваш заказ</h3>
+                            
+                            <div class="summary-details">
+                                <div class="summary-row">
+                                    <span>Товары (3)</span>
+                                    <span id="subtotal">4 500 ₽</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Доставка</span>
+                                    <span id="shipping">500 ₽</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Скидка</span>
+                                    <span id="discount">-200 ₽</span>
+                                </div>
+                                <div class="summary-row total">
+                                    <strong>Итого</strong>
+                                    <strong id="total">4 800 ₽</strong>
+                                </div>
+                            </div>
+                            
+                            <div class="promo-code">
+                                <input type="text" id="promo-input" placeholder="Промокод">
+                                <button id="apply-promo" class="btn btn-secondary">Применить</button>
+                            </div>
+                            
+                            <button id="checkout-btn" class="btn btn-primary btn-block" disabled>
+                                Перейти к оформлению
+                            </button>
+                            
+                            <div class="secure-checkout">
+                                <span class="secure-icon">🔒</span>
+                                <span>Безопасная оплата</span>
+                            </div>
+                        </div>
+                        
+                        <div class="delivery-info">
+                            <h4>Способы доставки</h4>
+                            <ul>
+                                <li>📦 Курьерская доставка - 500 ₽</li>
+                                <li>🚗 Самовывоз - бесплатно</li>
+                                <li>📮 Почта России - 350 ₽</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Стандартный footer -->
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

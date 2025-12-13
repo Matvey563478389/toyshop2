@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - Мир детских игрушек</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🎨 Мир Детских Игрушек</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="benefits.html">Польза и развитие</a></li>
+                    <li id="user-menu">
+                        <span id="user-greeting"></span>
+                        <div class="user-dropdown">
+                            <a href="profile.html" id="profile-link">Личный кабинет</a>
+                            <a href="cart.html">Корзина (<span id="cart-counter">0</span>)</a>
+                            <a href="#" id="logout-link">Выйти</a>
+                        </div>
+                    </li>
+                    <li id="guest-menu">
+                        <a href="login.html" class="btn-login">Войти</a>
+                        <a href="register.html" class="btn-register">Регистрация</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-card">
+                    <h2>Вход в аккаунт</h2>
+                    
+                    <form id="login-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" name="email" required 
+                                   placeholder="example@mail.ru">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="login-password">Пароль</label>
+                            <input type="password" id="login-password" name="password" required 
+                                   placeholder="Введите пароль">
+                            <div class="password-toggle">
+                                <input type="checkbox" id="show-password">
+                                <label for="show-password">Показать пароль</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label>
+                                <input type="checkbox" name="remember"> Запомнить меня
+                            </label>
+                            <a href="#" class="forgot-password">Забыли пароль?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Войти
+                        </button>
+                        
+                        <div class="auth-divider">
+                            <span>или войти через</span>
+                        </div>
+                        
+                        <div class="social-login">
+                            <button type="button" class="btn-social vk">
+                                <span class="social-icon">VK</span>
+                                ВКонтакте
+                            </button>
+                            <button type="button" class="btn-social google">
+                                <span class="social-icon">G</span>
+                                Google
+                            </button>
+                            <button type="button" class="btn-social yandex">
+                                <span class="social-icon">Я</span>
+                                Яндекс
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p>Еще нет аккаунта? <a href="register.html">Зарегистрироваться</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Стандартный footer -->
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
